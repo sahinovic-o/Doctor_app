@@ -18,10 +18,35 @@ class DoctorPage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const SignUpScreen()),
-              );
+              showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                        content: Text(
+                            'Are you sure you want to log out from the console ? '),
+                        actions: [
+                          TextButton(
+                            child: Text('Cancel'),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                          TextButton(
+                            child: Text('Yes'),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const SignUpScreen(),
+                                ),
+                              );
+                            },
+                          ),
+                        ],
+                      ));
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => const SignUpScreen()),
+              // );
             },
             icon: Icon(
               Icons.logout,
@@ -80,6 +105,9 @@ class DoctorPage extends StatelessWidget {
                     'images/sick.jfif',
                     width: 35,
                   ),
+                  SizedBox(
+                    width: 15,
+                  ),
                   Column(
                     children: [
                       Title(
@@ -108,6 +136,9 @@ class DoctorPage extends StatelessWidget {
                     'images/armpain.jfif',
                     width: 40,
                   ),
+                  SizedBox(
+                    width: 15,
+                  ),
                   Column(
                     children: [
                       Title(
@@ -133,6 +164,9 @@ class DoctorPage extends StatelessWidget {
                   Image.asset(
                     'images/covid.jfif',
                     width: 40,
+                  ),
+                  SizedBox(
+                    width: 15,
                   ),
                   Column(
                     children: [
@@ -172,6 +206,9 @@ class DoctorPage extends StatelessWidget {
                     'images/andy.jfif',
                     width: 40,
                   ),
+                  SizedBox(
+                    width: 15,
+                  ),
                   Column(
                     children: [
                       Title(
@@ -195,6 +232,9 @@ class DoctorPage extends StatelessWidget {
                   Image.asset(
                     'images/bell.jfif',
                     width: 40,
+                  ),
+                  SizedBox(
+                    width: 15,
                   ),
                   Column(
                     children: [
@@ -220,6 +260,9 @@ class DoctorPage extends StatelessWidget {
                     'images/fiona.jfif',
                     width: 40,
                   ),
+                  SizedBox(
+                    width: 15,
+                  ),
                   Column(
                     children: [
                       Title(
@@ -243,6 +286,9 @@ class DoctorPage extends StatelessWidget {
                   Image.asset(
                     'images/nezir.jfif',
                     width: 40,
+                  ),
+                  SizedBox(
+                    width: 15,
                   ),
                   Column(
                     children: [
@@ -282,6 +328,9 @@ class DoctorPage extends StatelessWidget {
                     'images/peter.jfif',
                     width: 40,
                   ),
+                  SizedBox(
+                    width: 15,
+                  ),
                   Column(
                     children: [
                       Title(
@@ -305,6 +354,9 @@ class DoctorPage extends StatelessWidget {
                   Image.asset(
                     'images/sam.jfif',
                     width: 40,
+                  ),
+                  SizedBox(
+                    width: 15,
                   ),
                   Column(
                     children: [
